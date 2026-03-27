@@ -14,6 +14,35 @@
 
 ## 🚀 快速开始
 
+### 基础使用
+
+以下是一个简单的使用示例，展示如何利用本项目测试 AI 智能体的 PR 提交功能：
+
+**示例 1：文档更新测试**
+
+```bash
+# 1. 克隆项目
+git clone https://github.com/your-username/agent-pr-test-docs.git
+cd agent-pr-test-docs
+
+# 2. 编辑文档
+echo "## 新增章节" >> docs/example.md
+
+# 3. 提交更改
+git add .
+git commit -m "docs: 添加测试章节"
+
+# 4. 创建 PR（通过 GitHub 网页界面或 CLI）
+gh pr create --title "docs: 添加测试章节" --body "测试 AI 智能体文档更新能力"
+```
+
+**示例 2：批量文档检查**
+
+```bash
+# 检查所有 Markdown 文件的链接有效性
+find . -name "*.md" -exec grep -l "\[.*\](.*\.md)" {} \;
+```
+
 ### 参与贡献
 
 如果你想为这个项目做出贡献，请遵循以下步骤：
