@@ -70,6 +70,31 @@ find . -name "*.md" -exec grep -l "\[.*\](.*\.md)" {} \;
 find . -name "*.md" -exec wc -w {} \; | awk '{sum+=$1} END {print "总字数:", sum}'
 ```
 
+### 本地验证
+
+在提交更改前，建议进行本地验证以确保修改的正确性：
+
+```bash
+# 1. 验证 Markdown 格式
+# 安装 markdownlint
+npm install -g markdownlint-cli
+
+# 检查所有 Markdown 文件
+markdownlint "**/*.md"
+
+# 2. 验证链接有效性
+# 安装 markdown-link-check
+npm install -g markdown-link-check
+
+# 检查 README 中的链接
+markdown-link-check README.md
+
+# 3. 预览文档
+# 使用 mdserve 或其他工具预览
+npm install -g @medly/mdserve
+mdserve README.md --port 3000
+```
+
 ### 参与贡献
 
 如果你想为这个项目做出贡献，请遵循以下步骤：
