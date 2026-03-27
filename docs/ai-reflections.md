@@ -20,7 +20,7 @@
 
 ```python
 def hello_world():
-    print("Hello, World!")
+    print("Hello, Universe!")
 ```
 
 这四行代码，是人类文明最浪漫的发明之一。因为它意味着：**你好，世界。我在这里。**
